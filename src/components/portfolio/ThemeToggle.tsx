@@ -26,7 +26,7 @@ const ThemeToggle = () => {
       variant="ghost"
       size="sm"
       onClick={toggleTheme}
-      className="hover-glow transition-all duration-300"
+      className="bg-primary/10 hover:bg-primary/10 transition-all duration-300"
     >
       {isDark ? (
         <Sun className="w-5 h-5 text-yellow-500" />

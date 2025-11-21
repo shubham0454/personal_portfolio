@@ -108,7 +108,7 @@ const Navigation = () => {
                   <Button 
                     variant="ghost" 
                     size="icon"
-                    className="hover-glow"
+                    className="bg-primary/10 hover:bg-primary/10"
                   >
                     <Menu className="w-5 h-5" />
                   </Button>

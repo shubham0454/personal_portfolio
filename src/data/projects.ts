@@ -12,18 +12,18 @@ import {
 } from "lucide-react";
 
 // Import project images
-import bigtokriImg from "@/assets/projects/bigtokri.png";
-import indianSolarImg from "@/assets/projects/indian_solar_ews_backend.png";
-import wardenSurgicalImg from "@/assets/projects/Warden Surgical.png";
-import aaeshkaImg from "@/assets/projects/aaeshka.png";
-import agromarineImg from "@/assets/projects/Agromarine-marketing-services.png";
-import krishDevelopersImg from "@/assets/projects/krish-developer.png";
-import gandhiPropertiesImg from "@/assets/projects/Gandhi-Properties.png";
-import sourcewellImg from "@/assets/projects/Sourcewell.jpg";
-import podcastCenterImg from "@/assets/projects/podcast-Center.png";
+import bigtokriImg from "@/assets/projects/bigtokri.webp";
+import indianSolarImg from "@/assets/projects/indian_solar_ews_backend.webp";
+import wardenSurgicalImg from "@/assets/projects/Warden Surgical.webp";
+import aaeshkaImg from "@/assets/projects/aaeshka.webp";
+import agromarineImg from "@/assets/projects/Agromarine-marketing-services.webp";
+import krishDevelopersImg from "@/assets/projects/krish-developer.webp";
+import gandhiPropertiesImg from "@/assets/projects/Gandhi-Properties.webp";
+import sourcewellImg from "@/assets/projects/Sourcewell.webp";
+import podcastCenterImg from "@/assets/projects/podcast-Center.webp";
 // TODO: Add actual Aksheyaganga project image
 // import aksheyagangaImg from "@/assets/projects/aksheyaganga.png";
-import aksheyagangaImg from "@/assets/projects/aksheyaganga-milk-collection.png"; // Temporary placeholder
+import aksheyagangaImg from "@/assets/projects/aksheyaganga-milk-collection.webp"; // Temporary placeholder
 
 export type ProjectLink = {
   label: string;

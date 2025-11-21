@@ -265,7 +265,7 @@ const About = () => {
                 return (
                   <Card 
                     key={category} 
-                    className="glass hover-glow transition-all duration-500 animate-slide-up group border-2 border-primary/30 hover:border-primary/50 bg-card/80"
+                    className="glass hover-glow transition-all duration-500 animate-slide-up group border-2 border-primary/30 hover:border-primary/50 bg-background/95 backdrop-blur-sm"
                     style={{
                       animationDelay: `${categoryIndex * 150}ms`,
                       animationFillMode: 'both',
@@ -273,10 +273,10 @@ const About = () => {
                   >
                     <CardContent className="p-6">
                       <div className="flex items-center gap-4 mb-6">
-                        <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                        <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-primary/20 border border-primary/30 text-primary group-hover:scale-110 transition-transform duration-300 shadow-md">
                           <IconComponent className="w-7 h-7" />
                         </div>
-                        <h3 className="text-xl font-bold text-primary group-hover:scale-105 transition-transform duration-300">
+                        <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                           {category}
                         </h3>
                       </div>
@@ -285,7 +285,7 @@ const About = () => {
                           <Badge 
                             key={skill} 
                             variant="secondary" 
-                            className="hover-glow transition-all duration-300 hover:scale-110 hover:-translate-y-1 bg-primary/10 border-primary/30 border text-primary hover:bg-primary hover:border-primary/50 hover:text-white font-medium px-4 py-2 text-sm"
+                            className="hover-glow transition-all duration-300 hover:scale-110 hover:-translate-y-1 bg-muted/60 border-primary/40 border-2 text-foreground hover:bg-primary hover:border-primary hover:text-white font-medium px-4 py-2 text-sm shadow-sm"
                             style={{
                               animationDelay: `${(categoryIndex * 150) + (skillIndex * 50)}ms`,
                             }}
