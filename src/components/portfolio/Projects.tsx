@@ -126,11 +126,16 @@ const Projects = () => {
                       </Card>
 
                       {/* Buttons outside the card */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        <Button variant="outline" size="sm" className="w-full" asChild>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="w-full border-2 border-primary/20 bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 group hover:scale-[1.01]"
+                          asChild
+                        >
                           <Link to={detailPath}>
-                            Project Overview
-                            <ArrowRight className="ml-2 h-4 w-4" />
+                            <span>Project Overview</span>
+                            <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                           </Link>
                         </Button>
                         {project.links.map((link) => (
@@ -139,14 +144,14 @@ const Projects = () => {
                             variant={link.variant === "ghost" ? "ghost" : link.variant === "secondary" ? "secondary" : "outline"}
                             size="sm"
                             className={cn(
-                              "w-full",
-                              link.variant === "primary" && "bg-gradient-primary text-white border-0",
-                              link.variant === "secondary" && "border-2 border-border bg-background text-foreground hover:border-primary hover:bg-muted/50 shadow-sm",
+                              "w-full transition-all duration-300 group hover:scale-[1.01]",
+                              link.variant === "primary" && "bg-gradient-primary text-white border-0 hover:shadow-lg hover:shadow-primary/20",
+                              link.variant === "secondary" && "border-2 border-border bg-background text-foreground hover:border-primary hover:bg-primary/5 hover:text-primary hover:shadow-md",
                             )}
                             asChild
                           >
                             <a href={link.url} target="_blank" rel="noopener noreferrer">
-                              <ArrowUpRight className="mr-2 h-4 w-4" />
+                              <ArrowUpRight className="mr-2 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                               {link.label}
                             </a>
                           </Button>
