@@ -24,6 +24,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { projectMap } from "@/data/projects";
+import ThemeToggle from "@/components/portfolio/ThemeToggle";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -66,23 +67,26 @@ const ProjectDetail = () => {
             </Link>
           </Button>
 
-          {project.links && project.links.length > 0 && (
-            <div className="flex flex-wrap items-center gap-2 justify-end">
-              {project.links.filter(l => l.variant === "primary").slice(0, 2).map((link) => (
-                <Button
-                  key={link.url}
-                  size="sm"
-                  className="bg-gradient-primary text-white border-0 hover:opacity-90 gap-1.5"
-                  asChild
-                >
-                  <a href={link.url} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="h-3.5 w-3.5" />
-                    <span className="hidden xs:inline">{link.label}</span>
-                  </a>
-                </Button>
-              ))}
-            </div>
-          )}
+          <div className="flex items-center gap-2.5 justify-end ml-auto">
+            {project.links && project.links.length > 0 && (
+              <div className="flex flex-wrap items-center gap-2">
+                {project.links.filter(l => l.variant === "primary").slice(0, 2).map((link) => (
+                  <Button
+                    key={link.url}
+                    size="sm"
+                    className="bg-gradient-primary text-white border-0 hover:opacity-90 gap-1.5"
+                    asChild
+                  >
+                    <a href={link.url} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-3.5 w-3.5" />
+                      <span className="hidden xs:inline">{link.label}</span>
+                    </a>
+                  </Button>
+                ))}
+              </div>
+            )}
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 

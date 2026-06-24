@@ -17,6 +17,24 @@
     <meta name="twitter:title" content="Shubham Kshirsagar - Full Stack Developer" />
     <meta name="twitter:description" content="Passionate Full Stack Developer creating amazing web applications" />
     <meta name="twitter:image" content="/placeholder.svg" />
+
+    <!-- Theme Initialization Script to prevent layout flashes -->
+    <script>
+      (function() {
+        try {
+          const savedTheme = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const shouldBeDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+          if (shouldBeDark) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {
+          console.error('Failed to initialize theme:', e);
+        }
+      })();
+    </script>
   </head>
 
   <body>
