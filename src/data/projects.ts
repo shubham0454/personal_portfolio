@@ -155,16 +155,16 @@ export const projects: Project[] = [
         url: "https://blog.echinstitute.org/",
         variant: "primary",
       },
-      {
-        label: "Website Preview",
-        url: "https://ech-institute-website-nine.vercel.app/",
-        variant: "secondary",
-      },
-      {
-        label: "Blog Preview",
-        url: "https://ech-institute-blog.vercel.app/",
-        variant: "secondary",
-      },
+      // {
+      //   label: "Website Preview",
+      //   url: "https://ech-institute-website-nine.vercel.app/",
+      //   variant: "secondary",
+      // },
+      // {
+      //   label: "Blog Preview",
+      //   url: "https://ech-institute-blog.vercel.app/",
+      //   variant: "secondary",
+      // },
       {
         label: "Website PRs",
         url: "https://github.com/echinstitute/ech-institute-website/pulls?q=is%3Apr+is%3Aclosed+author%3Ashubham0454",

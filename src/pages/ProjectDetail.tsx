@@ -299,60 +299,61 @@ const ProjectDetail = () => {
 
             {/* ── Sidebar ───────────────────────────────────────── */}
             <aside className="space-y-5 sm:space-y-6">
-
-              {/* Engagement Snapshot */}
-              <Card className="border-2 border-border bg-background/80 backdrop-blur sticky top-[72px]">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-sm sm:text-base font-semibold flex items-center gap-2">
-                    <Building2 className="h-4 w-4 text-primary" />
-                    Engagement Snapshot
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-3 text-sm">
-                  <InfoRow label="Client" value={project.client} icon={<User className="h-3.5 w-3.5" />} />
-                  <InfoRow label="Year" value={project.year} icon={<Calendar className="h-3.5 w-3.5" />} />
-                  <InfoRow label="Role" value={project.role} icon={<GitBranch className="h-3.5 w-3.5" />} />
-                  <InfoRow label="Focus Areas" value={`${project.focusAreas.length} areas`} icon={<Target className="h-3.5 w-3.5" />} />
-                  <InfoRow label="Outcomes" value={`${project.outcomes.length} achieved`} icon={<CheckCircle2 className="h-3.5 w-3.5" />} />
-                </CardContent>
-
-                {/* All Links in sidebar */}
-                {project.links && project.links.length > 0 && (
-                  <CardContent className="pt-0 space-y-2">
-                    <div className="border-t border-border pt-3">
-                      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">Project Links</p>
-                      <div className="flex flex-col gap-2">
-                        {project.links.map((link) => (
-                          <a
-                            key={link.url}
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={cn(
-                              "flex items-center justify-between gap-2 rounded-xl border-2 px-3 py-2.5 text-xs sm:text-sm font-medium transition-all",
-                              link.variant === "primary"
-                                ? "border-primary bg-primary/10 text-primary hover:bg-primary/20"
-                                : "border-border bg-background text-foreground hover:border-primary hover:bg-muted/40",
-                            )}
-                          >
-                            <span>{link.label}</span>
-                            <ArrowUpRight className="h-3.5 w-3.5 flex-shrink-0" />
-                          </a>
-                        ))}
-                      </div>
-                    </div>
+              <div className="lg:sticky lg:top-[72px] space-y-5 sm:space-y-6">
+                {/* Engagement Snapshot */}
+                <Card className="border-2 border-border bg-background shadow-xl">
+                  <CardHeader className="pb-2">
+                    <CardTitle className="text-sm sm:text-base font-semibold flex items-center gap-2">
+                      <Building2 className="h-4 w-4 text-primary" />
+                      Engagement Snapshot
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-3 text-sm">
+                    <InfoRow label="Client" value={project.client} icon={<User className="h-3.5 w-3.5" />} />
+                    <InfoRow label="Year" value={project.year} icon={<Calendar className="h-3.5 w-3.5" />} />
+                    <InfoRow label="Role" value={project.role} icon={<GitBranch className="h-3.5 w-3.5" />} />
+                    <InfoRow label="Focus Areas" value={`${project.focusAreas.length} areas`} icon={<Target className="h-3.5 w-3.5" />} />
+                    <InfoRow label="Outcomes" value={`${project.outcomes.length} achieved`} icon={<CheckCircle2 className="h-3.5 w-3.5" />} />
                   </CardContent>
-                )}
-              </Card>
 
-              {/* Project Image Preview */}
-              <div className="rounded-2xl overflow-hidden border-2 border-border shadow-lg">
-                <img
-                  src={project.heroImage}
-                  alt={project.title}
-                  className="w-full object-cover object-top"
-                  loading="lazy"
-                />
+                  {/* All Links in sidebar */}
+                  {project.links && project.links.length > 0 && (
+                    <CardContent className="pt-0 space-y-2">
+                      <div className="border-t border-border pt-3">
+                        <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-3">Project Links</p>
+                        <div className="flex flex-col gap-2">
+                          {project.links.map((link) => (
+                            <a
+                              key={link.url}
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={cn(
+                                "flex items-center justify-between gap-2 rounded-xl border-2 px-3 py-2.5 text-xs sm:text-sm font-medium transition-all",
+                                link.variant === "primary"
+                                  ? "border-primary bg-primary/10 text-primary hover:bg-primary/20"
+                                  : "border-border bg-background text-foreground hover:border-primary hover:bg-muted/40",
+                              )}
+                            >
+                              <span>{link.label}</span>
+                              <ArrowUpRight className="h-3.5 w-3.5 flex-shrink-0" />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </CardContent>
+                  )}
+                </Card>
+
+                {/* Project Image Preview */}
+                <div className="rounded-2xl overflow-hidden border-2 border-border shadow-lg max-h-[280px]">
+                  <img
+                    src={project.heroImage}
+                    alt={project.title}
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </aside>
           </div>
