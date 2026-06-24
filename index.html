@@ -23,8 +23,8 @@
       (function() {
         try {
           const savedTheme = localStorage.getItem('theme');
-          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          const shouldBeDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+          // Default to dark mode (true) if no theme preference is saved yet
+          const shouldBeDark = savedTheme === null ? true : savedTheme === 'dark';
           if (shouldBeDark) {
             document.documentElement.classList.add('dark');
           } else {
