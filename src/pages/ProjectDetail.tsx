@@ -79,7 +79,7 @@ const ProjectDetail = () => {
                   >
                     <a href={link.url} target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="h-3.5 w-3.5" />
-                      <span className="hidden xs:inline">{link.label}</span>
+                      <span>{link.label}</span>
                     </a>
                   </Button>
                 ))}
