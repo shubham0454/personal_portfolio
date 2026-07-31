@@ -20,29 +20,30 @@ const BASE_TECH_LOGOS: LogoItem[] = [
   { name: 'Express', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg', invertInDarkMode: true },
   { name: 'Knex.js', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/knexjs/knexjs-original.svg' },
   { name: 'PostgreSQL', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
-  { name: 'SQL Server', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg' },
+  { name: 'SQL Server', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-original.svg' },
   { name: 'MongoDB', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
   { name: 'AWS', url: 'https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg' },
-  { 
-    name: 'Hostinger', 
+  {
+    name: 'Hostinger',
     url: 'https://assets.hostinger.com/images/logo-new-2023-ce0da1c6a5.svg',
     fallback: 'https://www.hostinger.com/favicon.ico'
   },
   { name: 'cPanel', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cpanel/cpanel-original.svg' },
   { name: 'FileZilla', url: 'https://upload.wikimedia.org/wikipedia/commons/0/01/FileZilla_logo.svg' },
-  // { name: 'VS Code', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
-  // { 
-  //   name: 'Cursor', 
-  //   url: 'https://raw.githubusercontent.com/getcursor/cursor/main/packages/desktop/static/icon.png',
-  //   fallback: 'https://www.cursor.com/favicon.ico'
-  // },
-  // { 
-  //   name: 'Claude', 
-  //   url: 'https://www.anthropic.com/images/claude-logo.svg',
-  //   fallback: 'https://claude.ai/favicon.ico'
-  // },
-  // { name: 'ChatGPT', url: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg' },
-  // { name: 'Docker', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+  { name: 'VS Code', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
+  {
+    name: 'Cursor',
+    url: 'https://raw.githubusercontent.com/getcursor/cursor/main/packages/desktop/static/icon.png',
+    fallback: 'https://www.cursor.com/favicon.ico'
+  },
+  {
+    name: 'Claude',
+    url: 'https://api.iconify.design/logos:claude-icon.svg',
+    fallback: 'https://claude.ai/favicon.ico'
+  },
+  { name: 'ChatGPT', url: 'https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg' },
+  { name: 'Docker', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg' },
+  { name: 'Antigravity', url: 'https://www.gstatic.com/lamda/images/gemini_sparkle_v002_d4735304ff6292a690345.svg' },
   { name: 'Git', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
   { name: 'Firebase', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
 ];
@@ -68,14 +69,14 @@ const TechShowcase = () => {
 
     const animate = () => {
       if (!scrollContainer || isDragging || !autoScroll) return;
-      
+
       scrollPosition += scrollSpeed;
       const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
-      
+
       if (scrollPosition >= maxScroll) {
         scrollPosition = 0;
       }
-      
+
       scrollContainer.scrollLeft = scrollPosition;
       animationFrameId = requestAnimationFrame(animate);
     };
@@ -169,80 +170,79 @@ const TechShowcase = () => {
         </div>
       </div>
       <div className="relative w-full  mt-12">
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-muted/80 via-muted/40 to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-muted/80 via-muted/40 to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 bg-gradient-to-r from-muted/80 via-muted/40 to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-24 bg-gradient-to-l from-muted/80 via-muted/40 to-transparent z-10" />
 
-          <div
-            ref={scrollRef}
-            className={`flex items-center gap-8 sm:gap-10 md:gap-12 overflow-x-auto scrollbar-hide w-full ${
-              isDragging ? 'cursor-grabbing' : 'cursor-grab'
+        <div
+          ref={scrollRef}
+          className={`flex items-center gap-8 sm:gap-10 md:gap-12 overflow-x-auto scrollbar-hide w-full ${isDragging ? 'cursor-grabbing' : 'cursor-grab'
             }`}
-            style={{
-              scrollbarWidth: 'none',
-              msOverflowStyle: 'none',
-              WebkitOverflowScrolling: 'touch',
-            }}
-            onMouseDown={handleMouseDown}
-            onMouseLeave={handleMouseLeave}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-          >
-            {duplicatedLogos.map((logo, index) => {
-              const imageKey = `${logo.name}-${index}`;
-              const hasFailed = failedImages.has(imageKey);
-              const imageSrc = hasFailed && logo.fallback ? logo.fallback : logo.url;
-              
-              return (
-                <div
-                  key={imageKey}
-                  className="flex-shrink-0 flex flex-col items-center gap-3 w-28 sm:w-32 md:w-36 lg:w-40 text-center select-none"
-                >
-                  <div className="bg-background shadow-sm rounded-2xl p-4 md:p-5 lg:p-6 flex items-center justify-center h-24 md:h-28 lg:h-32 w-full border border-border/50 hover:border-primary/50 transition-colors">
-                    <img
-                      src={imageSrc}
-                      alt={`${logo.name} logo`}
-                      className={`h-14 md:h-16 lg:h-18 w-auto object-contain max-w-full ${logo.invertInDarkMode ? 'dark:invert' : ''}`}
-                      loading="lazy"
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        const currentSrc = target.src;
-                        
-                        // If we haven't tried the fallback yet, try it
-                        if (!hasFailed && logo.fallback) {
-                          // Check if current src matches the primary URL (accounting for full URL resolution)
-                          const isPrimaryUrl = currentSrc.includes(logo.url.split('/').pop() || '') || 
-                                               currentSrc === logo.url ||
-                                               currentSrc.endsWith(logo.url);
-                          
-                          if (isPrimaryUrl) {
-                            setFailedImages(prev => new Set(prev).add(imageKey));
-                            // Force React to re-render with fallback
-                            setTimeout(() => {
-                              target.src = logo.fallback!;
-                            }, 0);
-                            return;
-                          }
+          style={{
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none',
+            WebkitOverflowScrolling: 'touch',
+          }}
+          onMouseDown={handleMouseDown}
+          onMouseLeave={handleMouseLeave}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {duplicatedLogos.map((logo, index) => {
+            const imageKey = `${logo.name}-${index}`;
+            const hasFailed = failedImages.has(imageKey);
+            const imageSrc = hasFailed && logo.fallback ? logo.fallback : logo.url;
+
+            return (
+              <div
+                key={imageKey}
+                className="flex-shrink-0 flex flex-col items-center gap-3 w-28 sm:w-32 md:w-36 lg:w-40 text-center select-none"
+              >
+                <div className="bg-background shadow-sm rounded-2xl p-4 md:p-5 lg:p-6 flex items-center justify-center h-24 md:h-28 lg:h-32 w-full border border-border/50 hover:border-primary/50 transition-colors">
+                  <img
+                    src={imageSrc}
+                    alt={`${logo.name} logo`}
+                    className={`h-14 md:h-16 lg:h-18 w-auto object-contain max-w-full ${logo.invertInDarkMode ? 'dark:invert' : ''}`}
+                    loading="lazy"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      const currentSrc = target.src;
+
+                      // If we haven't tried the fallback yet, try it
+                      if (!hasFailed && logo.fallback) {
+                        // Check if current src matches the primary URL (accounting for full URL resolution)
+                        const isPrimaryUrl = currentSrc.includes(logo.url.split('/').pop() || '') ||
+                          currentSrc === logo.url ||
+                          currentSrc.endsWith(logo.url);
+
+                        if (isPrimaryUrl) {
+                          setFailedImages(prev => new Set(prev).add(imageKey));
+                          // Force React to re-render with fallback
+                          setTimeout(() => {
+                            target.src = logo.fallback!;
+                          }, 0);
+                          return;
                         }
-                        
-                        // Both URLs failed, show text fallback
-                        target.style.display = 'none';
-                        const parent = target.parentElement;
-                        if (parent && !parent.querySelector('span')) {
-                          const fallbackSpan = document.createElement('span');
-                          fallbackSpan.className = 'text-3xl font-bold text-primary';
-                          fallbackSpan.textContent = logo.name.charAt(0);
-                          parent.appendChild(fallbackSpan);
-                        }
-                      }}
-                    />
-                  </div>
-                  <span className="text-sm md:text-base lg:text-lg font-medium text-muted-foreground">{logo.name}</span>
+                      }
+
+                      // Both URLs failed, show text fallback
+                      target.style.display = 'none';
+                      const parent = target.parentElement;
+                      if (parent && !parent.querySelector('span')) {
+                        const fallbackSpan = document.createElement('span');
+                        fallbackSpan.className = 'text-3xl font-bold text-primary';
+                        fallbackSpan.textContent = logo.name.charAt(0);
+                        parent.appendChild(fallbackSpan);
+                      }
+                    }}
+                  />
                 </div>
-              );
-            })}
-          </div>
+                <span className="text-sm md:text-base lg:text-lg font-medium text-muted-foreground">{logo.name}</span>
+              </div>
+            );
+          })}
         </div>
+      </div>
     </section>
   );
 };
