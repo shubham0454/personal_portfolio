@@ -4,6 +4,7 @@ type LogoItem = {
   name: string;
   url: string;
   fallback?: string;
+  invertInDarkMode?: boolean;
 };
 
 const BASE_TECH_LOGOS: LogoItem[] = [
@@ -16,7 +17,7 @@ const BASE_TECH_LOGOS: LogoItem[] = [
   { name: 'Bootstrap', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
   { name: 'Tailwind CSS', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
   { name: 'Node.js', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
-  { name: 'Express', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
+  { name: 'Express', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg', invertInDarkMode: true },
   { name: 'Knex.js', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/knexjs/knexjs-original.svg' },
   { name: 'PostgreSQL', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg' },
   { name: 'SQL Server', url: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg' },
@@ -201,7 +202,7 @@ const TechShowcase = () => {
                     <img
                       src={imageSrc}
                       alt={`${logo.name} logo`}
-                      className="h-14 md:h-16 lg:h-18 w-auto object-contain max-w-full"
+                      className={`h-14 md:h-16 lg:h-18 w-auto object-contain max-w-full ${logo.invertInDarkMode ? 'dark:invert' : ''}`}
                       loading="lazy"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
