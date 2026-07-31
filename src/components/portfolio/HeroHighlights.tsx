@@ -12,7 +12,7 @@ const heroSlides = [
     metric: "25+ end-to-end launches",
     description:
       "Translate business goals into thoughtful architecture, ship production-ready code, and iterate with measurable impact.",
-    gradient: "from-primary/90 via-secondary/70 to-accent/80",
+    gradient: "from-primary to-accent",
     badges: ["Angular & React", "Express.js APIs", "PostgreSQL & MongoDB"],
   },
   {
@@ -20,7 +20,7 @@ const heroSlides = [
     metric: "Generative copilots in prod",
     description:
       "Blend Gemini, Claude, and custom embeddings with human-in-the-loop guardrails to unlock productivity for hybrid teams.",
-    gradient: "from-fuchsia-500/90 via-purple-500/70 to-sky-500/80",
+    gradient: "from-primary to-accent",
     badges: ["Google Gemini", "Anthropic Claude", "Retrieval Pipelines"],
   },
   {
@@ -28,7 +28,7 @@ const heroSlides = [
     metric: "99.9% uptime SLOs",
     description:
       "Automate deployments, implement observability, and keep services resilient across AWS, cPanel, and edge platforms.",
-    gradient: "from-emerald-500/90 via-cyan-500/70 to-blue-500/80",
+    gradient: "from-primary to-accent",
     badges: ["AWS & Supabase", "CI/CD Pipelines", "Telemetry & Dashboards"],
   },
 ];

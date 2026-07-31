@@ -222,7 +222,7 @@ const Contact = () => {
                     href={info.href}
                     className="flex items-center space-x-3 sm:space-x-4 p-3 rounded-lg hover:bg-secondary/50 transition-colors group"
                   >
-                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary via-purple-600 to-secondary rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform shadow-md flex-shrink-0">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-md flex-shrink-0">
                       <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
                     <div className="min-w-0 flex-1">

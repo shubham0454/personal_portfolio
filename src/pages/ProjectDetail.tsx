@@ -99,8 +99,8 @@ const ProjectDetail = () => {
             className="h-full w-full object-cover opacity-30"
             loading="eager"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
-          <div className={cn("absolute inset-0 bg-gradient-to-br opacity-20", project.gradient)} />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+          <div className={cn("absolute inset-0 bg-gradient-to-br opacity-[0.04]", project.gradient)} />
         </div>
 
         <div className="relative container mx-auto px-4 sm:px-6 py-10 sm:py-16 md:py-24">
@@ -118,7 +118,7 @@ const ProjectDetail = () => {
             {/* Icon + Title */}
             <div className="flex items-start gap-4">
               <div className={cn(
-                "hidden sm:flex h-14 w-14 md:h-16 md:w-16 items-center justify-center rounded-2xl text-white shadow-xl flex-shrink-0 bg-gradient-to-br mt-1",
+                "hidden sm:flex h-14 w-14 md:h-16 md:w-16 items-center justify-center rounded-2xl text-white shadow-[0_0_40px_hsl(var(--primary)/0.4)] flex-shrink-0 bg-gradient-to-br mt-1",
                 project.gradient,
               )}>
                 <Icon className="h-7 w-7 md:h-8 md:w-8" />
@@ -140,13 +140,13 @@ const ProjectDetail = () => {
               {project.metrics.map((metric) => (
                 <Card
                   key={metric.label}
-                  className="group relative overflow-hidden border-2 border-border bg-background/80 backdrop-blur-sm transition hover:-translate-y-1 hover:border-primary hover:shadow-xl"
+                  className="group relative overflow-hidden border-2 border-primary/20 bg-card hover:border-primary/40 hover:bg-card/80 transition-all duration-300 rounded-2xl"
                 >
-                  <CardContent className="relative space-y-1 p-3 sm:p-5">
-                    <span className="text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground">{metric.label}</span>
-                    <p className="text-lg sm:text-2xl font-bold text-foreground">{metric.value}</p>
-                    <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed">{metric.description}</p>
-                    <div className="absolute -right-5 -top-5 h-16 w-16 rounded-full bg-primary/10 transition group-hover:scale-150" />
+                  <CardContent className="relative space-y-1 p-4 sm:p-6">
+                    <span className="text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground font-semibold">{metric.label}</span>
+                    <p className="text-xl sm:text-3xl font-bold text-foreground">{metric.value}</p>
+                    <p className="text-[10px] sm:text-xs text-muted-foreground leading-relaxed mt-1">{metric.description}</p>
+                    <div className="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-primary/10 blur-xl transition group-hover:scale-150" />
                   </CardContent>
                 </Card>
               ))}

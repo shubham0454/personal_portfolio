@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
+        outfit: ['Outfit', 'sans-serif'],
+        syne: ['Syne', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {

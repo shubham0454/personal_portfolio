@@ -82,7 +82,7 @@ export const projects: Project[] = [
     duration: "2025",
     year: "2025",
     icon: Globe,
-    gradient: "from-purple-600 via-violet-500 to-indigo-500",
+    gradient: "from-primary to-accent",
     summary:
       "Contributed extensively to both the ECH Institute website and blog as an open-source collaborator with 13+ closed pull requests. On the website: built and improved the Home page layout, Navbar, Footer, About page, Donate page (Octant UI + pie chart), Events page with Next.js Image optimization, and a custom 404 page. On the blog: fixed an invalid URL TypeError in RSS feed, added XSLT styling for browser readability, enhanced blog posts with microdata attributes for SEO, and implemented pagination and search on the blog home page.",
     focusAreas: [
@@ -188,7 +188,7 @@ export const projects: Project[] = [
     duration: "2025",
     year: "2025",
     icon: ShoppingCart,
-    gradient: "from-amber-500 via-orange-500 to-rose-500",
+    gradient: "from-primary to-accent",
     summary:
       "Developed the full Angular 19 frontend for both customer website and admin dashboard. Built dynamic price display based on B2B/B2C user type, integrated Swagger APIs for product management, and created comprehensive admin panel for product and pricing management.",
     focusAreas: [
@@ -260,7 +260,7 @@ export const projects: Project[] = [
     duration: "2025",
     year: "2025",
     icon: Globe,
-    gradient: "from-blue-600 via-purple-500 to-violet-600",
+    gradient: "from-primary to-accent",
     summary:
       "Built the ETH Pune website – a modern Web3-themed site for Pune's Ethereum community. Features a purple/blue gradient Ethereum-inspired design, an interactive hero with Pune's map, smooth Framer Motion animations, community stats, events section, and connection to ETH Mumbai. Built with Next.js 14 and TypeScript for optimal performance.",
     focusAreas: [
@@ -331,7 +331,7 @@ export const projects: Project[] = [
     duration: "2025",
     year: "2025",
     icon: Palette,
-    gradient: "from-fuchsia-500 via-purple-600 to-indigo-600",
+    gradient: "from-primary to-accent",
     summary:
       "Built the Studio Vyom website – a premium creative agency site showcasing services including 3D animation, web design, branding, and motion graphics. Crafted with a modern, dark aesthetic using Next.js, TypeScript, and Tailwind CSS to create a visually striking, responsive portfolio for the creative agency.",
     focusAreas: [
@@ -400,7 +400,7 @@ export const projects: Project[] = [
     duration: "2025",
     year: "2025",
     icon: Milk,
-    gradient: "from-sky-500 via-cyan-500 to-teal-500",
+    gradient: "from-primary to-accent",
     summary:
       "Built a comprehensive dairy management system consisting of a React 18 + TypeScript admin panel and a Node.js/Express.js backend API. The admin panel features dashboard analytics, driver management, dairy center management, milk collection records, and payment processing. The backend includes JWT authentication with RBAC, GPS tracking, Swagger API docs, Knex.js query builder with PostgreSQL, and 12 database tables.",
     focusAreas: [
@@ -489,7 +489,7 @@ export const projects: Project[] = [
     duration: "2025",
     year: "2025",
     icon: SunMedium,
-    gradient: "from-teal-500 via-cyan-500 to-blue-500",
+    gradient: "from-primary to-accent",
     summary:
       "Built the entire backend powering a mobile app used by solar installation employees. Implemented employee duty status tracking, task management, expense submission & approval system, and company details management.",
     focusAreas: [
@@ -551,7 +551,7 @@ export const projects: Project[] = [
     duration: "2025 – Ongoing",
     year: "2025",
     icon: Stethoscope,
-    gradient: "from-red-500 via-pink-500 to-rose-500",
+    gradient: "from-primary to-accent",
     summary:
       "Developed a complete system including website, admin panel, and backend for a medical instruments supplier. Built quotation generation system, product management with 1500+ items, and category-based filtering across 4 main categories.",
     focusAreas: [
@@ -625,7 +625,7 @@ export const projects: Project[] = [
     duration: "2025",
     year: "2025",
     icon: Building2,
-    gradient: "from-blue-500 via-indigo-500 to-purple-500",
+    gradient: "from-primary to-accent",
     summary:
       "Built a static website for a real estate builder showcasing floor plans, amenities, completed and ongoing projects. Includes project selection with detailed information display.",
     focusAreas: [
@@ -691,7 +691,7 @@ export const projects: Project[] = [
     duration: "2025",
     year: "2025",
     icon: Fish,
-    gradient: "from-cyan-500 via-blue-500 to-teal-500",
+    gradient: "from-primary to-accent",
     summary:
       "Built a static website for a global seafood export company showcasing sea shrimps, cephalopods, premium fish, export certifications, and highlighting 19+ years of industry experience.",
     focusAreas: [
@@ -756,7 +756,7 @@ export const projects: Project[] = [
     duration: "2025",
     year: "2025",
     icon: Home,
-    gradient: "from-green-500 via-emerald-500 to-teal-500",
+    gradient: "from-primary to-accent",
     summary:
       "Built a comprehensive real estate website for a builder showcasing ongoing, future, and completed projects. Includes all necessary services and project information.",
     focusAreas: [
@@ -822,7 +822,7 @@ export const projects: Project[] = [
     duration: "2025 – Ongoing",
     year: "2025",
     icon: Building2,
-    gradient: "from-purple-500 via-violet-500 to-fuchsia-500",
+    gradient: "from-primary to-accent",
     summary:
       "Converted full Figma design into responsive website for a real estate builder. Includes multiple pages: Home, About, Media & News, Gandhi Empire, Blogs, Contact, and Sitemap.",
     focusAreas: [
@@ -892,7 +892,7 @@ export const projects: Project[] = [
     duration: "2025",
     year: "2025",
     icon: Mail,
-    gradient: "from-indigo-500 via-blue-500 to-cyan-500",
+    gradient: "from-primary to-accent",
     summary:
       "Created custom email banner using HTML, CSS, and JavaScript. Designed clickable product links and active logo redirection for marketing mailers.",
     focusAreas: [
@@ -948,7 +948,7 @@ export const projects: Project[] = [
     duration: "2025 – Ongoing",
     year: "2025",
     icon: Radio,
-    gradient: "from-pink-500 via-rose-500 to-orange-500",
+    gradient: "from-primary to-accent",
     summary:
       "Built a creative podcast production website using React and Tailwind CSS. Added animations and transitions for premium feel, integrated Calendly for meeting scheduling, and showcased services including podcast production, video editing, YouTube thumbnails, and website development.",
     focusAreas: [
@@ -1014,7 +1014,7 @@ export const projects: Project[] = [
     duration: "2025 – Ongoing",
     year: "2025",
     icon: Droplet,
-    gradient: "from-blue-500 via-cyan-500 to-teal-500",
+    gradient: "from-primary to-accent",
     summary:
       "Developing a comprehensive milk collection management system with Flutter mobile app (iOS & Android), Angular admin panel, and Node.js backend. Tracks milk collection from multiple centers, manages cow and buffalo milk separately, calculates pricing based on fat content and liters, and enables cross-checking between collection locations and main center.",
     focusAreas: [

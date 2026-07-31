@@ -32,14 +32,14 @@ const StatsCounter = () => {
       label: 'Core Technologies',
       value: counts.technologies,
       suffix: '+',
-      color: 'text-secondary'
+      color: 'text-primary'
     },
     {
       icon: GitCommit,
       label: 'Git/GitHub Commits',
       value: counts.commits,
       suffix: '+',
-      color: 'text-accent'
+      color: 'text-primary'
     },
     {
       icon: CloudUpload,
@@ -112,16 +112,16 @@ const StatsCounter = () => {
           {stats.map((stat, index) => (
             <Card 
               key={index} 
-              className="text-center border border-border bg-card hover:border-primary/50 transition-colors duration-300"
+              className="text-center border border-border/50 bg-card/80 hover:border-primary/40 hover:bg-card transition-all duration-300 rounded-2xl"
             >
-              <CardContent className="p-4 sm:p-6">
-                <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-muted mb-3 sm:mb-4 ${stat.color}`}>
-                  <stat.icon className="w-6 h-6 sm:w-7 sm:h-7" />
+              <CardContent className="p-6 sm:p-8 flex flex-col items-center justify-center">
+                <div className={`inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-primary/10 mb-4 sm:mb-5 ${stat.color}`}>
+                  <stat.icon className="w-7 h-7 sm:w-8 sm:h-8" strokeWidth={2} />
                 </div>
-                <div className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-foreground ${isVisible ? 'animate-count-up' : ''}`}>
+                <div className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-3 text-foreground ${isVisible ? 'animate-count-up' : ''}`}>
                   {stat.value.toLocaleString()}{stat.suffix}
                 </div>
-                <div className="text-xs sm:text-sm text-muted-foreground font-medium">
+                <div className="text-sm sm:text-base text-muted-foreground font-medium">
                   {stat.label}
                 </div>
               </CardContent>

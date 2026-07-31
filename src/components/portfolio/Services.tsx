@@ -52,7 +52,7 @@ const services: ServiceDefinition[] = [
     description:
       "End-to-end podcast production from recording to publishing. We handle the entire production pipeline so you stay focused on storytelling.",
     icon: Mic,
-    gradient: "from-violet-500 via-purple-500 to-fuchsia-500",
+    gradient: "from-primary to-accent",
     features: [
       "Professional studio-grade recording",
       "Multi-track editing and mixing",
@@ -74,7 +74,7 @@ const services: ServiceDefinition[] = [
     description:
       "Transform raw footage into cinematic stories with precise editing, color grading, motion graphics, and broadcast-ready finishing.",
     icon: Video,
-    gradient: "from-cyan-500 via-blue-500 to-indigo-500",
+    gradient: "from-primary to-accent",
     features: [
       "4K / UHD editing workflows",
       "Color grading & correction",
@@ -96,7 +96,7 @@ const services: ServiceDefinition[] = [
     description:
       "Custom thumbnails engineered to stop the scroll, reinforce your brand, and dramatically lift click-through rates.",
     icon: Image,
-    gradient: "from-orange-500 via-red-500 to-pink-500",
+    gradient: "from-primary to-accent",
     features: [
       "Concept-driven thumbnail design",
       "Variant creation for A/B testing",
@@ -118,7 +118,7 @@ const services: ServiceDefinition[] = [
     description:
       "Full-service channel management covering optimization, scheduling, analytics, and community growth strategies.",
     icon: Youtube,
-    gradient: "from-red-500 via-pink-500 to-rose-500",
+    gradient: "from-primary to-accent",
     features: [
       "Channel audits & optimization",
       "SEO-rich titles & descriptions",
@@ -140,7 +140,7 @@ const services: ServiceDefinition[] = [
     description:
       "Integrated digital marketing programs engineered to boost visibility, sustain engagement, and convert audiences.",
     icon: TrendingUp,
-    gradient: "from-green-500 via-emerald-500 to-teal-500",
+    gradient: "from-primary to-accent",
     features: [
       "Social media strategy & execution",
       "Content calendars & production",
@@ -162,7 +162,7 @@ const services: ServiceDefinition[] = [
     description:
       "Modern, responsive websites tailored to your brand with conversion-focused UX and performance best practices.",
     icon: Globe,
-    gradient: "from-indigo-500 via-purple-500 to-pink-500",
+    gradient: "from-primary to-accent",
     features: [
       "Responsive, accessible UI design",
       "Custom development & integrations",
@@ -184,7 +184,7 @@ const services: ServiceDefinition[] = [
     description:
       "Capture and repurpose meetings, webinars, and live sessions with multi-angle production and polished edits.",
     icon: Headphones,
-    gradient: "from-blue-500 via-cyan-500 to-teal-500",
+    gradient: "from-primary to-accent",
     features: [
       "4K multi-angle capture",
       "Studio-grade audio recording",
@@ -206,7 +206,7 @@ const services: ServiceDefinition[] = [
     description:
       "Multi-platform distribution to amplify your content footprint with smart repurposing and analytics-backed iteration.",
     icon: Share2,
-    gradient: "from-purple-500 via-pink-500 to-red-500",
+    gradient: "from-primary to-accent",
     features: [
       "Channel-specific repackaging",
       "Automated posting cadences",
