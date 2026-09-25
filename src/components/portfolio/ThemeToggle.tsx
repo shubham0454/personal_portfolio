@@ -2,13 +2,19 @@ import { useState, useEffect } from 'react';
 import { Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+const THEME_KEY = 'portfolio_theme';
+
 const ThemeToggle = () => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    // Default to dark mode (true) if no theme preference is saved yet
-    const shouldBeDark = savedTheme === null ? true : savedTheme === 'dark';
+    // Clear legacy stored 'theme' if it was left over from dark default
+    if (localStorage.getItem('theme') === 'dark' && !localStorage.getItem(THEME_KEY)) {
+      localStorage.removeItem('theme');
+    }
+    const savedTheme = localStorage.getItem(THEME_KEY) || localStorage.getItem('theme');
+    // Default to light mode (false) on all devices unless explicitly saved as 'dark'
+    const shouldBeDark = savedTheme === 'dark';
     
     setIsDark(shouldBeDark);
     document.documentElement.classList.toggle('dark', shouldBeDark);
@@ -17,6 +23,7 @@ const ThemeToggle = () => {
   const toggleTheme = () => {
     const newTheme = !isDark;
     setIsDark(newTheme);
+    localStorage.setItem(THEME_KEY, newTheme ? 'dark' : 'light');
     localStorage.setItem('theme', newTheme ? 'dark' : 'light');
     document.documentElement.classList.toggle('dark', newTheme);
   };
